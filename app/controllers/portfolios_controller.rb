@@ -28,7 +28,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.update(blog_params)
-        format.html { redirect_to @portfolio_item, notice: 'Record was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Record was successfully updated.' }
         #format.json { render :show, status: :ok, location: @portfolio_item }
       else
         format.html { render :edit }
